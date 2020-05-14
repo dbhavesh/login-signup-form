@@ -31,7 +31,8 @@ p {
 }
 
 span {
-	font-size: 12px;
+    font-size: 12px;
+    color: grey;
 }
 
 a {
@@ -53,6 +54,7 @@ button {
 	text-transform: uppercase;
     transition: transform 80ms ease-in;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 button:active {
@@ -65,7 +67,6 @@ button:focus {
 
 button:hover {
     background-color: rgb(11, 11, 126);
-    /* color: rgb(9, 9, 97); */
 }
 
 button.ghost {
@@ -107,7 +108,7 @@ input {
 	overflow: hidden;
 	width: 768px;
 	max-width: 100%;
-    min-height: 480px;
+    min-height: 580px;
     background-image: url("images/overlay-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
