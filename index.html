@@ -12,42 +12,59 @@
 </head>
 <body>
     <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
+        <div class="form-container sign-up-container" id="sign-up-container">
+            <form action="#" novalidate>
                 <h1>Create an account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social"><i class="fab fa-github"></i></a>
                 </div>
-                <span><sup>______________</sup> 
+                <span><sup>________</sup> 
                     &nbsp; &nbsp; 
                     or 
                     &nbsp; &nbsp; 
-                <sup>______________</sup></span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <input type="password" placeholder="Confirm Password" />
-
+                <sup>________</sup></span>
+                <div class="form-control">
+                    <input type="text" placeholder="Name" id="su-name" />
+                    <div class="hide error-msg">Error</div>
+                </div>
+                <div class="form-control">
+                    <input type="email" placeholder="Email" id="su-email" />
+                    <div class="hide error-msg">Error</div>
+                </div>
+                <div class="form-control">
+                    <input type="password" placeholder="Password" id="su-password" />
+                    <div class="hide error-msg">Error</div>
+                </div>
+                <div class="form-control">
+                    <input type="password" placeholder="Confirm Password" id="sc-password" />
+                    <div class="hide error-msg">Error</div>
+                </div>
                 <button>Sign Up</button>
             </form>
         </div>
-        <div class="form-container sign-in-container">
-            <form action="#">
+        <div class="form-container sign-in-container" id="sign-in-container">
+            <form action="#" novalidate>
                 <h1>Sign in</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social"><i class="fab fa-github"></i></a>
                 </div>
-                <span><sup>______________</sup> 
+                <span><sup>________</sup> 
                     &nbsp; &nbsp; 
                     or 
                     &nbsp; &nbsp; 
-                <sup>______________</sup></span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <sup>________</sup></span>
+                <div class="form-control">
+                    <input type="email" placeholder="Email" id="si-email" />
+                    <div class="hide error-msg">Error</div>
+                </div>
+                <div class="form-control">
+                    <input type="password" placeholder="Password" id="si-password" />
+                    <div class="hide error-msg">Error</div>
+                </div>
                 <a href="#" class="password-reset">Reset password</a>
                 <button>Sign In</button>
             </form>
