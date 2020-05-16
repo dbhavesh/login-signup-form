@@ -33,7 +33,7 @@ function checkRequired(inputArr) {
 
 function checkEmail(input) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(input.value !== '') {
+    if(input.value) {
         re.test(input.value.trim())
         ? showSuccess(input)
         : showError(input, 'Invalid Email');
@@ -41,8 +41,8 @@ function checkEmail(input) {
 }
 
 function checkName(input) {
-    const re = /^[a-zA-Z]+(?:-[a-zA-Z]+)*$/;
-    if(input.value !== '') {
+    const re = /^[a-zA-Z ]+(?:-[a-zA-Z ]+)*$/;
+    if(input.value) {
         re.test(input.value.trim())
         ? showSuccess(input)
         : showError(input, 'Invalid Name');
@@ -50,7 +50,7 @@ function checkName(input) {
 }
 
 function checkPassword(input ,min, max) {
-    if (input.value !== '') {
+    if (input.value) {
         input.value.length < min
         ? showError(input, `Password must be at least ${min} characters`)
         : input.value.length > max
@@ -60,7 +60,7 @@ function checkPassword(input ,min, max) {
 }
 
 function checkPasswordMatch(input1, input2) {
-    if (input2.value !== '' && (input1.value !== input2.value)) {
+    if (input2.value && (input1.value !== input2.value)) {
       showError(input2, 'Passwords do not match');
     }
 }
@@ -71,6 +71,7 @@ suContainer.addEventListener('submit', e => {
     checkEmail(suEmail);
     checkName(suName);
     checkPassword(suPassword, 6, 20);
+    checkPassword(suPassword2, 6, 20);
     checkPasswordMatch(suPassword, suPassword2);
 })
 
